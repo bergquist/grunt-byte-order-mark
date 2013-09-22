@@ -1,17 +1,17 @@
 {
-  "name": "grunt-contrib-bom",
+  "name": "grunt-byte-order-mark",
   "version": "0.1.0",
   "description": "Grunt task to add or remove BOM from files",
-  "homepage": "http://github.com/bergquist/grunt-contrib-bom",
+  "homepage": "http://github.com/bergquist/grunt-byte-order-mark",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bergquist/grunt-contrib-bom.git"
+    "url": "git://github.com/bergquist/grunt-byte-order-mark.git"
   },
   "keywords": [
-    "grunt-contrib"
+    "grunt"
   ],
   "author": "Carl Bergquist",
   "license": "MIT",
