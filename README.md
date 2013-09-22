@@ -1,6 +1,11 @@
 grunt-contrib-bom [![Build Status](https://api.travis-ci.org/bergquist/grunt-contrib-bom.png)](https://travis-ci.org/bergquist/grunt-contrib-bom) [![NPM version](https://badge.fury.io/js/grunt-contrib-bom.png)](https://npmjs.org/package/grunt-contrib-bom)
 =================
 
+Why?! you might ask.
+Cause IIS damends it!
+
+Hopefully this will make the issue easier for fellow windows devs!
+
 Grunt task to strip or add BOM to files
 
 ```shell
