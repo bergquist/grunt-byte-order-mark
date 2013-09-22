@@ -13,10 +13,17 @@ grunt.loadNpmTasks('grunt-byte-order-mark');
 
 ```js
 bom: {
-  src: '*.txt',
-  options: {
-    add: true, //you can only choose one.
-    remove: true
+  addBom: {
+    src: 'file-wihtout-bom.txt',
+    options: {
+      add: true
+    }
+  },
+  removeBom: {
+    src: 'file-wiht-bom.txt',
+    options: {
+      remove: true
+    }
   }
 }
 ```
