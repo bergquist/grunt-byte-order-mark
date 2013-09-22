@@ -1,6 +1,6 @@
 {
   "name": "grunt-contrib-bom",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Grunt task to add or remove BOM from files",
   "homepage": "http://github.com/bergquist/grunt-contrib-bom",
   "scripts": {
