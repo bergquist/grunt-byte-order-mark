@@ -12,10 +12,21 @@ module.exports = function(grunt) {
       src: 'test/tmp'
     },
     nodeunit: {
-      tests: 'test/add_bom_test.js'
+      tests: 'test/*_test.js'
     },
     bom: {
-      src: 'test/tmp/add/*.txt'
+      addBom: {
+        src: 'test/tmp/add/*.txt',
+        options: {
+          add: true
+        }
+      },
+      removeBom: {
+        src: 'test/tmp/remove/*.txt',
+        options: {
+          add: false
+        }
+      }
     }
   })
 
@@ -24,8 +35,11 @@ module.exports = function(grunt) {
   grunt.registerTask('copy', function() {
     grunt.file.copy('test/fixtures/with-bom.txt', 'test/tmp/add/with-bom.txt')
     grunt.file.copy('test/fixtures/without-bom.txt', 'test/tmp/add/without-bom.txt')
+
+    grunt.file.copy('test/fixtures/with-bom.txt', 'test/tmp/remove/with-bom.txt')
+    grunt.file.copy('test/fixtures/without-bom.txt', 'test/tmp/remove/without-bom.txt')
   })
 
   grunt.registerTask('default', ['jshint', 'test'])
-  grunt.registerTask('test', ['clean', 'copy', 'bom', 'nodeunit', 'clean'])
+  grunt.registerTask('test', ['clean', 'copy', 'bom:addBom', 'bom:removeBom', 'nodeunit', 'clean'])
 }
